@@ -10,6 +10,9 @@ class String(object):
 	def concat(self, nstr):
 		for x in nstr:
 			self.chars.append(x)
+	def append(self, other):self.concat(str(other))
+	def prepend(self, in_str):
+		self.chars=(str(in_str)+str(self)).split('')
 	def __iter__(self):
 		for x in self.chars:
 			yield x
@@ -18,6 +21,7 @@ class String(object):
 	def __setitem__(self, key, value):self.chars[key]=value
 	def __delitem__(self, key):del self.chars[key]
 	def __add__(self, other):return (str(self)+str(other))
+	def __radd__(self, other):return (str(in_str)+str(self))
 	def __iadd__(self, other):self.concat(str(other))
 	def __mul__(self, other):
 		other=int(other)
