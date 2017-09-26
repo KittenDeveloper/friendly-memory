@@ -2,6 +2,8 @@ class String(object):
 	def __init__(self, val=None):
 		if in_str!=None:self.set(str(val))
 		self.chars=[]
+	def __eq__(self, other):return str(other)==str(self)
+	def __ne__(self, other):return not str(other)==str(self)
 	def set(self, nstr):
 		self.chars=[]
 		for x in nstr:
@@ -18,6 +20,7 @@ class String(object):
 			yield x
 	def insert(self, x, y):for z in str(y):chars.insert(x,z)
 	def join(self, in_seq):str(self).join(in_seq)
+	def split(self, other):return str(self).split(str(other))
 	def tostr(self):return str(self)
 	def __getitem__(self, key):return str(self)[key]
 	def __setitem__(self, key, value):self.chars[key]=value
