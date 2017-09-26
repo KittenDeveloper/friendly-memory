@@ -18,6 +18,7 @@ class String(object):
 	def __iter__(self):
 		for x in self.chars:
 			yield x
+	def __len__(self):return len(self.chars)
 	def insert(self, x, y):for z in str(y):chars.insert(x,z)
 	def join(self, in_seq):str(self).join(in_seq)
 	def split(self, other):return str(self).split(str(other))
