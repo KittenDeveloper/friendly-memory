@@ -23,27 +23,27 @@ class String(object):
 	def join(self, in_seq):str(self).join(in_seq)
 	def split(self, other):return str(self).split(str(other))
 	def tostr(self):return str(self)
-	def __getitem__(self, key):return str(self)[key]
+	def __getitem__(self, key):return String(val=str(self)[key])
 	def __setitem__(self, key, value):self.chars[key]=value
 	def __delitem__(self, key):del self.chars[key]
-	def __add__(self, other):return (str(self)+str(other))
-	def __radd__(self, other):return (str(in_str)+str(self))
+	def __add__(self, other):return String(val=str(self)+str(other))
+	def __radd__(self, other):return String(str(in_str)+str(self))
 	def __iadd__(self, other):self.concat(str(other))
 	def __mul__(self, other):
 		other=int(other)
-		return str(self)*other
+		return String(val=str(self)*other)
 	def __imul__(self, other):
 		other=int(other)
 		self.set(str(self)*other)
 	def __sub__(self, other):
 		if type(other)!=int:other=int(other)
-		return str(self)[:-other]
+		return String(val=str(self)[:-other])
 	def __isub__(self, other):
 		if type(other)!=int:
 			other=int(other)
 		a=[]
 		for x in range(other):a.append(self.chars.pop())
-		return a
+		return String(val=a.join(''))
 	def __div__(self, other):
 		other=str(other)
 		return str(self).split(other)
