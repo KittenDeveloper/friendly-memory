@@ -17,7 +17,7 @@ class String(object):
 		for x in self.chars:
 			yield x
 	def tostr(self):return str(self)
-	def __getitem__(self, key):return self.chars[key]
+	def __getitem__(self, key):return str(self)[key]
 	def __setitem__(self, key, value):self.chars[key]=value
 	def __delitem__(self, key):del self.chars[key]
 	def __add__(self, other):return (str(self)+str(other))
