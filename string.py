@@ -16,7 +16,8 @@ class String(object):
 	def __iter__(self):
 		for x in self.chars:
 			yield x
-	def insert(self, x, y):chars.insert(x,y)
+	def insert(self, x, y):for z in str(y):chars.insert(x,z)
+	def join(self, in_seq):str(self).join(in_seq)
 	def tostr(self):return str(self)
 	def __getitem__(self, key):return str(self)[key]
 	def __setitem__(self, key, value):self.chars[key]=value
