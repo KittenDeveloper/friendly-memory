@@ -1,0 +1,3 @@
+#Test file
+import: module.xim
+fishes(10)

@@ -1,0 +1,6 @@
+#Module in xim
+_use_unsafe
+function fishes($x)
+{
+print:"You have ".$x." fishes.\n"
+}
